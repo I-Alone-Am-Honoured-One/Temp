@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulse — Social Communication</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div class="brand">
+          <div class="logo">P</div>
+          <div>
+            <h1>Pulse</h1>
+            <p>Share quick updates with your people.</p>
+          </div>
+        </div>
+        <nav class="nav">
+          <button class="nav-button" data-panel="login">Log in</button>
+          <button class="nav-button primary" data-panel="register">Create account</button>
+        </nav>
+      </header>
+
+      <main class="content">
+        <section class="feed">
+          <div class="composer">
+            <div class="avatar">@</div>
+            <div class="composer-body">
+              <p class="label">What’s happening?</p>
+              <div class="composer-card">
+                <p>Build your community with short posts, photos, and comments.</p>
+                <div class="composer-actions">
+                  <span>📎 Attach</span>
+                  <span>🎉 Celebrate</span>
+                  <span>📍 Location</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post">
+            <div class="post-header">
+              <span class="avatar">JB</span>
+              <div>
+                <h3>Jordan Blake</h3>
+                <p>@jordan · 2m</p>
+              </div>
+            </div>
+            <p class="post-body">
+              Pulse keeps our team connected between meetings. Love the quick updates.
+            </p>
+            <div class="post-actions">
+              <span>💬 12</span>
+              <span>🔁 4</span>
+              <span>❤️ 55</span>
+            </div>
+          </div>
+          <div class="post">
+            <div class="post-header">
+              <span class="avatar">AL</span>
+              <div>
+                <h3>Avery Lane</h3>
+                <p>@avery · 10m</p>
+              </div>
+            </div>
+            <p class="post-body">
+              New here! Excited to share more with everyone and see what you’re creating.
+            </p>
+            <div class="post-actions">
+              <span>💬 3</span>
+              <span>🔁 2</span>
+              <span>❤️ 18</span>
+            </div>
+          </div>
+        </section>
+
+        <aside class="panel" id="auth-panel">
+          <div class="panel-toggle">
+            <button class="toggle active" data-panel="login">Log in</button>
+            <button class="toggle" data-panel="register">Register</button>
+          </div>
+
+          <div class="panel-body" data-panel-body>
+            <form id="login-form" class="form active">
+              <h2>Welcome back</h2>
+              <p>Log in to see the latest updates.</p>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="you@example.com" required />
+              </label>
+              <label>
+                Password
+                <input type="password" name="password" placeholder="••••••••" required />
+              </label>
+              <button type="submit" class="primary">Log in</button>
+              <p class="form-footer">
+                Don’t have an account?
+                <button type="button" class="link" data-panel="register">Create one</button>
+              </p>
+            </form>
+
+            <form id="register-form" class="form">
+              <h2>Create your account</h2>
+              <p>Join Pulse to start sharing and following.</p>
+              <label>
+                Display name
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="you@example.com" required />
+              </label>
+              <label>
+                Password
+                <input type="password" name="password" placeholder="At least 8 characters" required minlength="8" />
+              </label>
+              <button type="submit" class="primary">Register</button>
+              <p class="form-footer">
+                Already have an account?
+                <button type="button" class="link" data-panel="login">Log in</button>
+              </p>
+            </form>
+          </div>
+
+          <div class="panel-status" id="status-message" aria-live="polite"></div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
